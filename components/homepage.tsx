@@ -5,17 +5,17 @@ import { ArrowDown, ArrowUpRight, ArrowRight, Coffee, MapPin, Clock3, Menu, X, P
 
 const photo = (id: string, width = 1200) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${width}&q=85`;
 const images = {
-  hero: photo("photo-1442512595331-e89e73853f31", 2400),
-  barista: photo("photo-1445116572660-236099ec97a0"),
-  espresso: photo("photo-1510707577719-ae7c14805e3a", 700),
-  latte: photo("photo-1461023058943-07fcbe16d735", 700),
-  cappuccino: photo("photo-1572442388796-11668a67e53d", 700),
-  cold: photo("photo-1517701604599-bb29b565090c", 700),
-  signature: photo("photo-1541167760496-1628856ab772", 700),
-  cafe: photo("photo-1554118811-1e0d58224f24", 1800),
-  beans: photo("photo-1447933601403-0c6688de566e", 800),
-  interior: photo("photo-1501339847302-ac426a4a7cbb", 900),
-  pour: photo("photo-1495474472287-4d71bcdd2085", 900),
+  hero: "/images/naughty-coffee/cafe.avif",
+  barista: "/images/naughty-coffee/barista.avif",
+  espresso: "/images/naughty-coffee/espresso.avif",
+  latte: "/images/naughty-coffee/latte.avif",
+  cappuccino: photo("photo-1534778101976-62847782c213", 700),
+  cold: photo("photo-1461023058943-07fcbe16d735", 700),
+  signature: photo("photo-1509042239860-f550ce710b93", 700),
+  cafe: "/images/naughty-coffee/friends.avif",
+  beans: "/images/naughty-coffee/roasting.avif",
+  interior: "/images/naughty-coffee/coffee-bar.avif",
+  pour: "/images/naughty-coffee/pour.avif",
 };
 
 const products = [
@@ -84,7 +84,7 @@ export default function Homepage() {
 
     <main id="main">
       <section id="home" className="hero" ref={heroRef}>
-        <img className="hero-image" src={images.hero} alt="Freshly brewed coffee in a warm, sunlit café" fetchPriority="high" />
+        <img className="hero-image" src={images.hero} alt="Naughty Coffee café with stainless steel counters, wooden tables, and minimalist decor" fetchPriority="high" />
         <div className="hero-shade" />
         <div className="hero-content container">
           <div className="hero-eyebrow"><span /> SERIOUS COFFEE. NOT-SO-SERIOUS PEOPLE.</div>
@@ -99,7 +99,7 @@ export default function Homepage() {
       <div className="ticker" aria-label="Good beans. Better days. A little naughty."><div><span>GOOD BEANS.</span><span className="asterisk">✳</span><span>BETTER DAYS.</span><span className="asterisk">✳</span><span>A LITTLE NAUGHTY.</span><span className="asterisk">✳</span><span>ALWAYS GOOD COFFEE.</span><span className="asterisk">✳</span></div></div>
 
       <section id="about" className="about section container">
-        <div className="about-image reveal"><img src={images.barista} alt="Warm café counter with carefully arranged coffee equipment" loading="lazy" /><div className="image-caption"><span>A LITTLE CUP.</span><span>A WHOLE LOT OF SOUL.</span></div><div className="about-badge">100%<span>good energy</span><Coffee size={22} /></div></div>
+        <div className="about-image reveal"><img src={images.barista} alt="Naughty Coffee barista pouring milk while serving customers at Dadeland" loading="lazy" /><div className="image-caption"><span>A LITTLE CUP.</span><span>A WHOLE LOT OF SOUL.</span></div><div className="about-badge">100%<span>good energy</span><Coffee size={22} /></div></div>
         <div className="about-copy reveal"><Eyebrow>MORE THAN A COFFEE FIX</Eyebrow><h2>Life’s too short<br />for <em>boring coffee.</em></h2><p>We believe a great cup of coffee can turn your whole day around. And a great place to drink it? Even better.</p><p>Welcome to Naughty Coffee. A little escape from the everyday, where thoughtfully crafted coffee meets good conversation, easy mornings, and your kind of people.</p><a href="#experience" className="text-link">A taste of our world <ArrowUpRight size={19} /></a><div className="about-note"><span className="handwritten">Made with love. And a little mischief.</span><Heart size={22} strokeWidth={1.3} /></div></div>
       </section>
 
@@ -113,14 +113,14 @@ export default function Homepage() {
       </section>
 
       <section id="experience" className="experience">
-        <img src={images.cafe} alt="Inviting café interior with plants, warm lighting, and comfortable seating" loading="lazy" /><div className="experience-overlay" />
+        <img src={images.cafe} alt="Friends enjoying coffee beside the window at Naughty Coffee" loading="lazy" /><div className="experience-overlay" />
         <div className="container experience-content reveal"><Eyebrow>STAY A LITTLE LONGER</Eyebrow><h2>Your coffee.<br />Your corner.<br /><em>Your kind of place.</em></h2><p>Come for the coffee. Stay for the feeling.<br />There’s a seat here with your name on it.</p><a href="#visit" className="button button-cream">Make yourself at home <ArrowUpRight size={18} /></a></div>
         <div className="experience-features container"><div><Coffee /><span>Craft in every cup<small>Freshly made. Never rushed.</small></span></div><div><Heart /><span>Room to slow down<small>Cozy corners. Good company.</small></span></div><div><span className="feature-spark">✳</span><span>A little everyday magic<small>Your new favourite ritual.</small></span></div></div>
       </section>
 
       <section id="gallery" className="gallery-section section container">
         <div className="section-heading reveal"><div><Eyebrow>LITTLE MOMENTS. GOOD COMPANY.</Eyebrow><h2>The <em>naughty</em> side of life.</h2></div><span className="gallery-label"><Instagram size={18} /> THROUGH OUR LENS</span></div>
-        <div className="gallery-grid">{[{ src: images.pour, alt: "Coffee shared over a slow morning", label: "A moment for you" }, { src: images.interior, alt: "Sunlit seating and warm café textures", label: "Find your corner" }, { src: images.beans, alt: "Fresh roasted coffee beans", label: "Where it all begins" }, { src: images.signature, alt: "Artfully poured latte", label: "Love at first sip" }].map((item, i) => <button key={item.src} className={`gallery-item gallery-${i} reveal`} onClick={() => setDialog({ kind: "image", ...item })} aria-label={`Enlarge image: ${item.alt}`}><img src={item.src} alt={item.alt} loading="lazy" /><span>{item.label}<ArrowUpRight size={22} /></span></button>)}</div>
+        <div className="gallery-grid">{[{ src: images.pour, alt: "Pour-over coffee served on a wooden tray at Naughty Coffee", label: "A moment for you" }, { src: images.interior, alt: "Naughty Coffee bar with illuminated menus and espresso equipment", label: "Find your corner" }, { src: images.beans, alt: "Coffee beans roasting at Naughty Coffee", label: "Where it all begins" }, { src: images.latte, alt: "Naughty Coffee latte served on a wooden tray", label: "Love at first sip" }].map((item, i) => <button key={item.src} className={`gallery-item gallery-${i} reveal`} onClick={() => setDialog({ kind: "image", ...item })} aria-label={`Enlarge image: ${item.alt}`}><img src={item.src} alt={item.alt} loading="lazy" /><span>{item.label}<ArrowUpRight size={22} /></span></button>)}</div>
         <div className="gallery-caption"><span>COFFEE LOOKS GOOD ON YOU.</span><span className="handwritten">Make a little time for the good stuff.</span></div>
       </section>
 

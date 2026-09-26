@@ -17,6 +17,6 @@ No build or test commands were run during creation.
 
 ## Proposal content
 
-Photography loads from Unsplash image URLs and fonts load from Google Fonts; both require an internet connection. Images are illustrative, not verified photos of Naughty Coffee. Menu descriptions are concept copy. Location, hours, contact information, and social URLs are deliberately unconfigured until confirmed. Contact and social buttons explain this in a dialog. The map is a styled placeholder, not an interactive map. Update content in `components/homepage.tsx` and styling in `app/globals.css`.
+Hero, story, experience, gallery, espresso, and latte photography is sourced from Naughty Coffee’s official website and stored in `public/images/naughty-coffee/`. Original source URLs are recorded in `sources.json` in that folder. The other three drink images are illustrative Unsplash photos, not verified Naughty Coffee products. These Unsplash images and Google Fonts require an internet connection. Menu descriptions are concept copy. Location, hours, contact information, and social URLs are deliberately unconfigured until confirmed. Contact and social buttons explain this in a dialog. The map is a styled placeholder, not an interactive map. Update content in `components/homepage.tsx` and styling in `app/globals.css`.
 
 No inner pages, backend, authentication, CMS, or API integrations are included.
