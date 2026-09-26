@@ -1,0 +1,16 @@
+{
+  "sourcePages": [
+    "https://www.naughtycoffeeshop.com/",
+    "https://www.naughtycoffeeshop.com/menu"
+  ],
+  "images": {
+    "cafe.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/6a3d3b3de3d4c5271183146d_Concept.avif",
+    "barista.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/6a1816a53b109f5aabf8defa_dadeland.avif",
+    "espresso.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/69ca6f064b5a57c4083ac334_Gallery6.avif",
+    "latte.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/6a1819ba2d8f5c730d7e8c6d_Menu1.avif",
+    "roasting.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/6a3d3b7937d2ebb8751017c8_phase02.avif",
+    "friends.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/69ca6f077d4064a857fec646_Gallery3.avif",
+    "pour.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/6a3d3b3d0b98c9c215ee65f8_Extarction.avif",
+    "coffee-bar.avif": "https://cdn.prod.website-files.com/69c63b2ac948349ef8ca5a01/69ca6f0723d14b6aa2688029_Gallery4.avif"
+  }
+}
